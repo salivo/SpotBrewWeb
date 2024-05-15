@@ -62,7 +62,7 @@ function MapPage(pros){ // args: [onChoose, cookies]
         <ImageOverlay url={testmap} bounds={bounds} />
         <Marker position={markerPosition} draggable={true} eventHandlers={{drag:handleMarkerDrag, dragend: handleMarkerDragend}} bounds={bounds}></Marker>
       </MapContainer>
-      <button onClick={() => {pros.onChoose(pros.args)}}>Confirm</button>
+      <button onClick={() => {pros.onChoose(last_marker_pos, pros.args)}}>Confirm</button>
     </div>
   )
 }

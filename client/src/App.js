@@ -79,10 +79,11 @@ function Handle_product_onchoose(canid, args){ // args: [setCookie]
 }
 
 
-function sendProductsAndGetID(args){ // args: [cookies, setCookie]
+function sendProductsAndGetID(pos, args){ // args: [cookies, setCookie]
   console.log('hello');
   const data = {
-    canid: args.cookies.choosed_product
+    canid: args.cookies.choosed_product,
+    pos: pos
   };
   fetch('http://localhost:5000', {
     method: 'POST',
